@@ -36,4 +36,5 @@ group :development do
   gem 'slim_lint', require: false
   gem 'rubocop', require: false
   gem 'rubocop-rspec', require: false
+  gem 'overcommit', require: false
 end
