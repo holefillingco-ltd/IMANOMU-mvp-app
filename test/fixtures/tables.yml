@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  id: 1
+  shop_id: 1
+  capacity: 1
+  type: 1
+  status: 1
+
+two:
+  id: 1
+  shop_id: 1
+  capacity: 1
+  type: 1
+  status: 1
