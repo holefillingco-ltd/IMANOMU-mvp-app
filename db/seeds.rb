@@ -3,7 +3,7 @@ Shop.create!(
   [
     {
       shop_id: "password", phone_number: "09088727381",
-      name: "居酒屋1", description: "居酒屋の説明", postal_code: "2310025",
+      name: "居酒屋1", description: "居酒屋1の説明", postal_code: "2310025",
       address: "東京都港区芝公園４丁目２−８", latitude: 35.658577,
       longitude: 139.745451, start_time: "17:00", close_time: "24:00",
       tables_count: 100, genre: "和食", price_range: 1,
@@ -11,34 +11,34 @@ Shop.create!(
     },
     {
       shop_id: "password", phone_number: "09088727381",
-      name: "居酒屋2", description: "居酒屋の説明", postal_code: "2310025",
+      name: "居酒屋2", description: "居酒屋2の説明", postal_code: "2310025",
       address: "東京都港区芝公園４丁目２−８", latitude: 35.658577,
       longitude: 139.745451, start_time: "17:00", close_time: "24:00",
-      tables_count: 100, genre: "和食", price_range: 1,
+      tables_count: 100, genre: "焼き鳥", price_range: 1,
       vacancy_status: 0
     },
     {
       shop_id: "password", phone_number: "09088727381",
-      name: "居酒屋3", description: "居酒屋の説明", postal_code: "2310025",
+      name: "居酒屋3", description: "居酒屋3の説明", postal_code: "2310025",
       address: "東京都港区芝公園４丁目２−８", latitude: 35.658577,
       longitude: 139.745451, start_time: "17:00", close_time: "24:00",
-      tables_count: 100, genre: "和食", price_range: 1,
+      tables_count: 100, genre: "韓国料理", price_range: 1,
       vacancy_status: 0
     },
     {
       shop_id: "password", phone_number: "09088727381",
-      name: "居酒屋4", description: "居酒屋の説明", postal_code: "2310025",
+      name: "居酒屋4", description: "居酒屋4の説明", postal_code: "2310025",
       address: "東京都港区芝公園４丁目２−８", latitude: 35.658577,
       longitude: 139.745451, start_time: "17:00", close_time: "24:00",
-      tables_count: 100, genre: "和食", price_range: 1,
+      tables_count: 100, genre: "海鮮", price_range: 1,
       vacancy_status: 0
     },
     {
       shop_id: "password", phone_number: "09088727381",
-      name: "居酒屋5", description: "居酒屋の説明", postal_code: "2310025",
+      name: "居酒屋5", description: "居酒屋5の説明", postal_code: "2310025",
       address: "東京都港区芝公園４丁目２−８", latitude: 35.658577,
       longitude: 139.745451, start_time: "17:00", close_time: "24:00",
-      tables_count: 100, genre: "和食", price_range: 1,
+      tables_count: 100, genre: "イタリアンバル", price_range: 1,
       vacancy_status: 0
     }
   ]
@@ -49,39 +49,43 @@ Table.create!(
   [
     {
       shop_id: 1, capacity: 4,
-      table_type: 0, vacancy_status: 0,
+      table_type: 0, vacancy_status: 0
     },
     {
       shop_id: 1, capacity: 4,
-      table_type: 2, vacancy_status: 0,
+      table_type: 1, vacancy_status: 0
     },
     {
       shop_id: 1, capacity: 4,
-      table_type: 3, vacancy_status: 0,
+      table_type: 2, vacancy_status: 0
+    },
+    {
+      shop_id: 1, capacity: 4,
+      table_type: 3, vacancy_status: 0
+    },
+    {
+      shop_id: 1, capacity: 4,
+      table_type: 4, vacancy_status: 0
     },
     {
       shop_id: 2, capacity: 4,
-      table_type: 4, vacancy_status: 0,
+      table_type: 0, vacancy_status: 0
     },
     {
       shop_id: 2, capacity: 4,
-      table_type: 0, vacancy_status: 0,
+      table_type: 1, vacancy_status: 0
     },
     {
       shop_id: 2, capacity: 4,
-      table_type: 1, vacancy_status: 0,
+      table_type: 2, vacancy_status: 0
     },
     {
       shop_id: 2, capacity: 4,
-      table_type: 2, vacancy_status: 0,
+      table_type: 3, vacancy_status: 0
     },
     {
       shop_id: 2, capacity: 4,
-      table_type: 3, vacancy_status: 0,
-    },
-    {
-      shop_id: 2, capacity: 4,
-      table_type: 4, vacancy_status: 0,
+      table_type: 4, vacancy_status: 0
     }
   ]
 )
