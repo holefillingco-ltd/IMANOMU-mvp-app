@@ -13,3 +13,40 @@
  *= require_tree .
  *= require_self
  */
+
+.all_tables {
+  margin: 0 auto;
+  margin-top: 50px;
+  width: 80%;
+  height: auto;
+}
+/* 鳥屋 */
+#toriya1,#toriya2,#toriya3,#toriya4,#toriya5,#toriya6  {
+  width: 12%;
+  height: 60px;
+  margin: 30px;
+  float: left;
+  background-color: red;
+}
+#toriya7 {
+  width: 200px;
+  height: 90px;
+  margin: 30px;
+  float: left;
+  background-color: red;
+}
+#toriya8 {
+  width: 100px;
+  height: 60px;
+  margin: 30px;
+  float: left;
+  background-color: red;
+}
+#toriya9,#toriya10,#toriya11,#toriya12,#toriya13,#toriya14,#toriya15,#toriya16 {
+  width: 70px;
+  height: 70px;
+  margin: 30px;
+  float: left;
+  background-color: red;
+}
+

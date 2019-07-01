@@ -1,6 +1,6 @@
 p#notice = notice
 
-
-=> link_to 'Edit', edit_shop_path(@shop)
-'|
+p = @shop.name
 =< link_to 'Back', shops_path
+
+== render 'shop' + @shop.id.to_s
