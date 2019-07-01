@@ -2,6 +2,7 @@
 Shop.create!(
   [
     {
+
       shop_id: "kitashinti_toriya_20190702", phone_number: "050-3463-4056",
       name: "北新地 鳥屋 渋谷道玄坂店", description: "居酒屋の説明", postal_code: "150-0043",
       address: "東京都渋谷区道玄坂1-10-7 五島育英会ビル1F", latitude: 35.658577,
@@ -17,7 +18,7 @@ Table.create!(
   [
     {
       shop_id: 1, capacity: 4,
-      table_type: 0, vacancy_status: 0,
+      table_type: 0, vacancy_status: 0
     },
     {
       shop_id: 1, capacity: 4,
