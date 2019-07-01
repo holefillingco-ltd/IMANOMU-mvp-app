@@ -1,14 +1,14 @@
 <div class="all_tables">
 <% @shop.tables.each do |table| %>
-  <div id="toriya<%= table.id %>" class="<%= table.vacancy_status %> <%= table.table_type %>">
+  <div id="toriya<%= table.id %>" class="table <%= table.vacancy_status %>">
     <%= table.capacity %>
   </div>
 <% end %>
 <script>
 $(function(){
   function buildTABLE(table) {
-    console.log(table)
     $(`#toriya${table.id}`).removeClass();
+    $(`#toriya${table.id}`).addClass('table');
     $(`#toriya${table.id}`).addClass(`${table.vacancy_status}`);
   }
   $(function(){
@@ -27,5 +27,8 @@ $(function(){
       });
     });
   }
+  // $('table').click(function(){
+
+  // })
 });
 </script>
