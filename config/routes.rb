@@ -1,3 +1,8 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+
+  get '/', to: 'shops#top', as: 'shops_top'
+  get '/owner_show', to: 'shops#owner_show', as: 'owner_show'
+  resource :shop, only: [:index, :show]
+  resource :table, only: [:update]
+  resource :imanomu, only: [:create]
 end

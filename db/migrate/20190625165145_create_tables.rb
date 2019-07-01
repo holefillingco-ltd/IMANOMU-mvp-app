@@ -6,6 +6,7 @@ class CreateTables < ActiveRecord::Migration[5.2]
       # enable_enum
       t.integer :table_type, null: false
       t.integer :vacancy_status, default: 0, null: false
+      t.integer :reserved, default: 0, null: false
       # disenable_enum
 
       t.timestamps

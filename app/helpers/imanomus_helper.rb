@@ -1,0 +1,2 @@
+module ImanomusHelper
+end

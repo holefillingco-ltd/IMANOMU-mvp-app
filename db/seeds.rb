@@ -34,6 +34,8 @@ Shop.create!(
       vacancy_status: 0
     },
     {
+      shop_id: "password5", phone_number: "09088727381",
+      name: "居酒屋5", description: "居酒屋の説明", postal_code: "2310025",
       shop_id: "password", phone_number: "09088727381",
       name: "居酒屋5", description: "居酒屋5の説明", postal_code: "2310025",
       address: "東京都港区芝公園４丁目２−８", latitude: 35.658577,
