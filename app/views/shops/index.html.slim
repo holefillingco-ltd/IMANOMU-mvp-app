@@ -1,4 +1,4 @@
-h1 Listing shops
+h1 shops
 
 table
   thead
@@ -10,10 +10,6 @@ table
   tbody
     - @shops.each do |shop|
       tr
-        td = link_to 'Show', shop
-        td = link_to 'Edit', edit_shop_path(shop)
-        td = link_to 'Destroy', shop, data: { confirm: 'Are you sure?' }, method: :delete
-
+        td = shop.name
+        td = link_to shop.name, shop_path(shop)
 br
-
-= link_to 'New Shop', new_shop_path

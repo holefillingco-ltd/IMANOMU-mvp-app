@@ -1,0 +1,30 @@
+<div class="all_tables">
+<% @shop.tables.each do |table| %>
+  <div id="toriya<%= table.id %>" class="<%= table.vacancy_status %> <%= table.table_type %>">
+    <%= table.capacity %>
+  </div>
+<% end %>
+<script>
+$(function(){
+  function buildTABLE(table) {
+    $(`#toriya${table.id}`).removeClass();
+    $(`#toriya${table.id}`).addClass(`${table.vacancy_status}`);
+  }
+  $(function(){
+    setInterval(getTablesStatus, 1000);
+  });
+  // 定期的に更新する関数
+  function getTablesStatus(){
+    $.ajax({
+      url: location.href,
+      type: 'GET',
+      dataType: 'json'
+    })
+    .always(function(json){
+      $.each(JSON.parse(json), function(i, data){
+        buildTABLE(data);
+      });
+    });
+  }
+});
+</script>

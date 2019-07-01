@@ -8,6 +8,11 @@ class ShopsController < ApplicationController
 
   def show
     @shop = Shop.find(params[:id])
+
+    respond_to do |format|
+      format.html
+      format.json { @tables = @shop.tables }
+    end
   end
 
   # owner_show内でshopに紐付く座席一覧をrender
