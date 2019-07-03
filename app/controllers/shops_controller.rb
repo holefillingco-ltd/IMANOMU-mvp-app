@@ -8,7 +8,9 @@ class ShopsController < ApplicationController
 
   def show
     @shop = Shop.find(params[:id])
-
+    if !session[:user_token]
+      session[:user_token] = SecureRandom.uuid
+    end
     respond_to do |format|
       format.html
       format.json { @tables = @shop.tables }
