@@ -8,6 +8,7 @@ class ShopsController < ApplicationController
 
   def show
     @shop = Shop.find(params[:id])
+    @imanomu = Imanomu.new
     if !session[:user_token]
       session[:user_token] = SecureRandom.uuid
     end

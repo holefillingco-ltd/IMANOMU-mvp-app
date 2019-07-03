@@ -1,21 +1,36 @@
-<div class="all_tables">
+<div class='all_tables'>
 <% @shop.tables.each do |table| %>
-  <div id="toriya<%= table.id %>" class="table <%= table.vacancy_status %>">
+  <div id='toriya<%= table.id %>' class='table <%= table.vacancy_status %>'>
     <%= table.capacity %>
+    <%= table.imanomus.count %>
+  </div>
+  <div id='table_toriya<%= table.id %>' class='imanomu_modal'>
+    <%= table.capacity %>
+    <%= table.table_type %>
+    <%= session[:user_token] %>
+    <%= form_for(@imanomu) do |f| %>
+      <%= f.hidden_field :shop_id, :value => @shop.id %>
+      <%= f.hidden_field :table_id, :value => table.id %>
+      <%= f.hidden_field :u_id, :value => session[:user_token] %>
+      <%= f.submit "IMANOMU" %>
+    <% end %>
   </div>
 <% end %>
+</div>
+<div id="overlay">
+</div>
 <script>
 //TODO: jsの切り出し
 $(function(){
   function buildTABLE(table) {
-    $(`#toriya${table.id}`).removeClass();
-    $(`#toriya${table.id}`).addClass('table');
-    $(`#toriya${table.id}`).addClass(`${table.vacancy_status}`);
+    $(`#${table.id}`).removeClass();
+    $(`#${table.id}`).addClass('table');
+    $(`#${table.id}`).addClass(`${table.vacancy_status}`);
   }
   $(function(){
     setInterval(getTablesStatus, 60000);
   });
-  // 定期的に更新する関数
+  // 定期的に席情報を更新する関数
   function getTablesStatus(){
     $.ajax({
       url: location.href,
@@ -28,7 +43,16 @@ $(function(){
       });
     });
   }
-  // $('table').click(function(){
-  // })
+  // modal挿入
+  $('.table').click(function(){
+    var id = $(this).attr('id');
+    $('#overlay').fadeIn();
+    $(`#table_${id}`).fadeIn();
+  });
+  $('#overlay').click(function(){
+    var id = $(this).attr('id');
+    $('#overlay').fadeOut();
+    $('[id^=table]').fadeOut();
+  })
 });
 </script>
