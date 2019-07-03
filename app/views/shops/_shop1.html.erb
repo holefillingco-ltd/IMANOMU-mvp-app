@@ -2,7 +2,7 @@
 <% @shop.tables.each do |table| %>
   <div id='toriya<%= table.id %>' class='table <%= table.vacancy_status %>'>
     <%= table.capacity %>
-    <%= table.imanomus.count %>
+    <%= table.imanomus.where(display: 1).count %>
   </div>
   <div id='table_toriya<%= table.id %>' class='imanomu_modal'>
     <%= table.capacity %>

@@ -5,5 +5,5 @@ Rails.application.routes.draw do
   get '/shops/:id', to: 'shops#show', as: 'shop'
   get '/owner_show', to: 'shops#owner_show', as: 'owner_show'
   resource :table, only: [:update]
-  resource :imanomu, only: [:create]
+  resource :imanomu, only: [:create], as: 'imanomus'
 end
