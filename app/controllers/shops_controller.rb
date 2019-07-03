@@ -8,7 +8,10 @@ class ShopsController < ApplicationController
 
   def show
     @shop = Shop.find(params[:id])
-
+    @imanomu = Imanomu.new
+    if !session[:user_token]
+      session[:user_token] = SecureRandom.uuid
+    end
     respond_to do |format|
       format.html
       format.json { @tables = @shop.tables }
@@ -20,9 +23,9 @@ class ShopsController < ApplicationController
     @shop = Shop.find_by(shop_id: params[:password])
     if @shop.present?
       session[:owner_password] = params[:password]
-      @tables = @shop.tables
+      @shop.save
     else
-      redirect shops_top_path, notice: "IDが違います"
+      redirect_to shops_top_path, notice: "IDが違います"
     end
   end
 end
