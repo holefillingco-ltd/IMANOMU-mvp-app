@@ -23,9 +23,9 @@
 //TODO: jsの切り出し
 $(function(){
   function buildTABLE(table) {
-    $(`#${table.id}`).removeClass();
-    $(`#${table.id}`).addClass('table');
-    $(`#${table.id}`).addClass(`${table.vacancy_status}`);
+    $(`#toriya${table.id}`).removeClass();
+    $(`#toriya${table.id}`).addClass('table');
+    $(`#toriya${table.id}`).addClass(`${table.vacancy_status}`);
   }
   $(function(){
     setInterval(getTablesStatus, 60000);
