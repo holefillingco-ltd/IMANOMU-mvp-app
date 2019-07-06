@@ -12,7 +12,11 @@
       <%= f.hidden_field :shop_id, :value => @shop.id %>
       <%= f.hidden_field :table_id, :value => table.id %>
       <%= f.hidden_field :u_id, :value => session[:user_token] %>
-      <%= f.submit "IMANOMU" %>
+      <% if Imanomu.where(display: 1, shop_id: @shop.id, table_id: table.id, u_id: session[:user_token]).first.present? %>
+          <p>このページを店le員にお見せください！</p>
+        <% else %>
+          <%= f.submit "IMANOMU" %>
+      <% end %>
     <% end %>
   </div>
   <div id='table_status_toriya<%= table.id %>' class='status_modal'>
