@@ -15,44 +15,15 @@
       <%= f.submit "IMANOMU" %>
     <% end %>
   </div>
+  <div id='table_status_toriya<%= table.id %>' class='status_modal'>
+    <%= table.capacity %>
+    <%= table.table_type %>
+    <%= form_tag('/table', method:'put') do %>
+      <%= select_tag 'vacancy_status', options_for_select([['空席', 'vacan'], ['在席', 'fill']])%>
+      <%= hidden_field_tag :id, table.id %>
+      <%= submit_tag "変更" %>
+    <% end %>
+  </div>
 <% end %>
 </div>
-<div id="overlay">
-</div>
-<script>
-//TODO: jsの切り出し
-$(function(){
-  function buildTABLE(table) {
-    $(`#toriya${table.id}`).removeClass();
-    $(`#toriya${table.id}`).addClass('table');
-    $(`#toriya${table.id}`).addClass(`${table.vacancy_status}`);
-  }
-  $(function(){
-    setInterval(getTablesStatus, 60000);
-  });
-  // 定期的に席情報を更新する関数
-  function getTablesStatus(){
-    $.ajax({
-      url: location.href,
-      type: 'GET',
-      dataType: 'json'
-    })
-    .always(function(json){
-      $.each(json, function(i, data){
-        buildTABLE(data);
-      });
-    });
-  }
-  // modal挿入
-  $('.table').click(function(){
-    var id = $(this).attr('id');
-    $('#overlay').fadeIn();
-    $(`#table_${id}`).fadeIn();
-  });
-  $('#overlay').click(function(){
-    var id = $(this).attr('id');
-    $('#overlay').fadeOut();
-    $('[id^=table]').fadeOut();
-  })
-});
-</script>
+<div id="overlay"></div>

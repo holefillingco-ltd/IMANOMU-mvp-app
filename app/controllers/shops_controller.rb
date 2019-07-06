@@ -21,6 +21,7 @@ class ShopsController < ApplicationController
   # owner_show内でshopに紐付く座席一覧をrender
   def owner_show
     @shop = Shop.find_by(shop_id: params[:password])
+    @imanomu = Imanomu.new
     if @shop.present?
       session[:owner_password] = params[:password]
       @shop.save
