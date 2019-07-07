@@ -1,11 +1,12 @@
 $(function(){
   function buildTABLE(table) {
+    $(`.imanomu_count${table.id}`).text(Object.keys(table['imanomus']).length);
     $(`#toriya${table.id}`).removeClass();
     $(`#toriya${table.id}`).addClass('table');
     $(`#toriya${table.id}`).addClass(`${table.vacancy_status}`);
   }
   $(function(){
-    setInterval(getTablesStatus, 60000);
+    setInterval(getTablesStatus, 1000);
   });
   // 定期的に席情報を更新する関数
   function getTablesStatus(){

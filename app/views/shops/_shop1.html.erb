@@ -2,7 +2,7 @@
 <% @shop.tables.each do |table| %>
   <div id='toriya<%= table.id %>' class='table <%= table.vacancy_status %>'>
     <%= table.capacity %>
-    <%= table.imanomus.where(display: 1).count %>
+    <p class='imanomu_count<%= table.id %>'><%= table.imanomus.where(display: 1).count %></p>
   </div>
   <div id='table_toriya<%= table.id %>' class='imanomu_modal'>
     <%= table.capacity %>
@@ -13,7 +13,7 @@
       <%= f.hidden_field :table_id, :value => table.id %>
       <%= f.hidden_field :u_id, :value => session[:user_token] %>
       <% if Imanomu.where(display: 1, shop_id: @shop.id, table_id: table.id, u_id: session[:user_token]).first.present? %>
-          <p>このページを店le員にお見せください！</p>
+          <p>このページを店員にお見せください！</p>
         <% else %>
           <%= f.submit "IMANOMU" %>
       <% end %>

@@ -14,7 +14,7 @@ class ShopsController < ApplicationController
     end
     respond_to do |format|
       format.html
-      format.json { @tables = @shop.tables }
+      format.json { render json: @shop.tables.to_json(:include => [:imanomus]) }
     end
   end
 
@@ -27,6 +27,10 @@ class ShopsController < ApplicationController
       @shop.save
     else
       redirect_to shops_top_path, notice: "IDが違います"
+    end
+    respond_to do |format|
+      format.html
+      format.json { render json: @shop.tables.to_json(:include => [:imanomus]) }
     end
   end
 end
