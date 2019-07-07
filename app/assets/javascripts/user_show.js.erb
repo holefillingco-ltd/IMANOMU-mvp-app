@@ -6,7 +6,7 @@ $(function(){
     $(`#toriya${table.id}`).addClass(`${table.vacancy_status}`);
   }
   $(function(){
-    setInterval(getTablesStatus, 1000);
+    setInterval(getTablesStatus, 60000);
   });
   // 定期的に席情報を更新する関数
   function getTablesStatus(){
