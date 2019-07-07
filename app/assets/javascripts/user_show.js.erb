@@ -1,5 +1,6 @@
 $(function(){
   function buildTABLE(table) {
+    $(`.imanomu_count${table.id}`).text(Object.keys(table['imanomus']).length);
     $(`#toriya${table.id}`).removeClass();
     $(`#toriya${table.id}`).addClass('table');
     $(`#toriya${table.id}`).addClass(`${table.vacancy_status}`);
