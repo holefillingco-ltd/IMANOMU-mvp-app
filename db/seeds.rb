@@ -12,8 +12,8 @@ Shop.create!(
     {
       shop_id: "yakizakana_syokudou_20190708", phone_number: "050-5597-0990",
       name: "焼魚食堂", description: "焼魚の説明", postal_code: "150-0043",
-      address: "東京都渋谷区道玄坂1-7-1 グローリアビル2F", latitude: 35.658577,
-      longitude: 139.745451, start_time: "17:00", close_time: "23:00",
+      address: "東京都渋谷区道玄坂1-7-1 グローリアビル2F", latitude: 35.657645,
+      longitude: 139.699581, start_time: "17:00", close_time: "23:00",
       tables_count: 26, genre: "和食居酒屋", price_range: 0,
       vacancy_status: 0
     }
