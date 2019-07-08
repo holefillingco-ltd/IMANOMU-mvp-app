@@ -1,0 +1,12 @@
+<div class="container">
+  <div class="row">
+    <% @shops.each do |shop| %>
+      <div class="col-md-10 col-md-offset-1">
+        <%= image_tag("1/北新地.jpg") %>
+        <%= shop.name %>
+        <%= link_to 'Show', shop_path(shop) %>
+        <%= shop.vacancy_status %>
+      </div>
+    <% end %>
+  </div>
+</div>
