@@ -16,6 +16,7 @@ gem 'slim-rails'
 gem "jquery-rails"
 gem 'bootstrap', '~> 4.3.1'
 gem 'whenever', :require => false
+gem 'font-awesome-rails'
 
 group :development, :test do
   gem 'byebug', platforms: :mri

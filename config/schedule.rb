@@ -1,8 +1,8 @@
 every 30.minutes do
   runner "Tasks::ChImanomuDisplay.execute"
 end
-every 20.minutes do
-  runner "Tasks::ChShopVacancyStatus"
+every 10.minutes do
+  runner "Tasks::ChShopVacancyStatus.execute"
 end
 # Use this file to easily define all of your cron jobs.
 #

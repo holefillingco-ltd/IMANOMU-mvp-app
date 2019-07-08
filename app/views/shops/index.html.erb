@@ -1,12 +1,54 @@
-<div class="container">
-  <div class="row">
+<div class='container'>
+  <div class='row'>
     <% @shops.each do |shop| %>
-      <div class="col-md-10 col-md-offset-1">
-        <%= image_tag("1/北新地.jpg") %>
-        <%= shop.name %>
-        <%= link_to 'Show', shop_path(shop) %>
-        <%= shop.vacancy_status %>
+      <div class='shop_box'>
+        <%= link_to (shop_path(shop)), style: "text-decoration: none;" do %>
+          <p class='shop_name'><%= shop.name %></p>
+        <% end %>
+        <div class='swiper-container top-carousel'>
+          <div class='swiper-wrapper'>
+            <% shop.images.each do |image| %>
+              <%= image_tag(image.url, :class => 'swiper-slide') %>
+            <% end %>
+          </div>
+          <button class='swiper-button-prev'>
+          <button class='swiper-button-next'>
+        </div>
+        <p class='detail'><span>ジャンル： </span><%= shop.genre %></p><br>
+        <p class='detail'><span>住所： </span><%= shop.address %></p><br>
+        <p class='detail'><span>営業時間： </span><%= shop.start_time %>〜<%= shop.close_time %></p><br>
+        <p class='detail'><span>価格帯： </span><%= shop.price_range %>〜<%= shop.close_time %></p><br>
+        <%= link_to (shop_path(shop)), style: "text-decoration: none;" do %>
+          <% if shop.vacancy_status == '空席あり'%>
+            <h1 class='shop_vacan'><%= fa_icon 'dot-circle-o' %><%= shop.vacancy_status %></h1>
+          <% elsif shop.vacancy_status == '空席わずか'%>
+            <h1 class='shop_middle'><%= fa_icon 'exclamation-triangle' %><%= shop.vacancy_status %></h1>
+          <% else %>
+            <h1 class='shop_fill'><%= fa_icon 'ban' %><%= shop.vacancy_status %></h1>
+          <% end %>
+        <% end %>
       </div>
     <% end %>
   </div>
 </div>
+<%= javascript_include_tag "https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/js/swiper.min.js"%>
+<script>
+var mySwiper = new Swiper('.swiper-container', {
+  autoHeight: true,
+  loop: true,
+  autoplay: {
+    delay: 4000,
+    disableOnInteraction: false,
+    reverseDirection: false
+  },
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev'
+  },
+  pagination: {
+    el: '.swiper-pagination',
+    type: 'bullets',
+    clickable: true
+  }
+});
+</script>
