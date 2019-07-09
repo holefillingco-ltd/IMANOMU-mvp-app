@@ -5,8 +5,6 @@ class ImanomusController < ApplicationController
     @imanomu = Imanomu.new(imanomu_params)
     check_duplicated(@imanomu.shop_id, @imanomu.table_id, session[:user_token])
     if @imanomu.save
-      table = Table.find(@imanomu.table_id)
-      table.update(reserved: true)
       redirect_to shop_path(@imanomu.shop_id), notice: "イマノムを店舗に送信しました"
     else
       redirect_to shop_path(@imanomu.shop_id), notice: "ただいま混み合っております。時間を置いて再度送信してください"

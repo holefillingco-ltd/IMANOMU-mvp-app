@@ -8,7 +8,7 @@ Rails.application.config.assets.version = '1.0'
 # Add Yarn node_modules folder to the asset load path.
 Rails.application.config.assets.paths << Rails.root.join('node_modules')
 # owner_showで読み込むjs
-Rails.application.config.assets.precompile += %w( owner_show.js.erb )
+Rails.application.config.assets.precompile += %w( owner_show1.js.erb )
 Rails.application.config.assets.precompile += %w( user_show1.js.erb )
 Rails.application.config.assets.precompile += %w( user_show2.js.erb )
 

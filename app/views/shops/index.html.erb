@@ -1,3 +1,7 @@
+<%= form_tag('/owner_show', :method => 'get') do%>
+  <%= text_field_tag :password %>
+  <%= submit_tag %>
+<% end %>
 <div class='container'>
   <div class='row'>
     <% @shops.each do |shop| %>
