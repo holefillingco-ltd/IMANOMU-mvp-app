@@ -17,11 +17,46 @@
 @import 'bootstrap';
 
 // header
-.navbar {
-  margin-bottom: 50px;
-}
 .nav-item {
   text-align: center;
+}
+// TOPページ
+.top_image {
+  background-image: url(/images/top_page.jpg);
+  background-position: center center;
+  background-repeat:  no-repeat;
+  background-size: cover;
+  height: 600px;
+  width: 100%;
+  margin-bottom: 50px;
+  position: relative;
+}
+.top_title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%,-50%);
+  -webkit-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+  margin:0;
+  padding:0;
+  color: white;
+  font-weight: bold;
+  font-family :Quicksand, sans-serif;
+}
+.top_column {
+  position: absolute;
+  top: 63%;
+  left: 50%;
+  white-space: nowrap;
+  -ms-transform: translate(-50%,-50%);
+  -webkit-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+  margin:0;
+  padding:0;
+  color: white;
+  font-weight: bold;
+  font-family :Quicksand, sans-serif;
 }
 // 座席一覧
 .all_tables {
@@ -90,7 +125,7 @@
 // shops_index
 .shop_box {
   width: 100%;
-  margin-bottom: 50px;
+  margin-top: 50px;
   border-top-style: solid;
   border-top-color: #f25713;
   background-color: #fff;

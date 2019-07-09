@@ -1,0 +1,16 @@
+<div class='top_image'>
+  <h2 class='top_title'>
+    IMANOMU<br>
+  </h2>
+  <h4 class='top_column'>
+    もう居酒屋を探すのに時間を使うのをやめませんか？
+  </h4>
+</div>
+<section class='how_use'>
+
+</section>
+<%= form_tag('/owner_show', :method => 'get') do%>
+  <%= text_field_tag :password %>
+  <%= submit_tag %>
+<% end %>
+<%= link_to 'Index', shops_path %>
