@@ -1,12 +1,13 @@
-= javascript_include_tag "owner_show"
+<%= javascript_include_tag "owner_show#{@shop.id}.js" %>
 
-h1 = @shop.name
-- imanomu_count = 0
-- @shop.tables.each do |table|
-  - imanomu_count += table.imanomus.count
+<%= @shop.name%>
+<% imanomu_count = 0 %>
+<% @shop.tables.each do |table| %>
+  <% imanomu_count += table.imanomus.count %>
+<% end %>
 
-h2 送られたIMANOMU
-h2 = imanomu_count
+<h2>送られたIMANOMU</h2>
+<%= imanomu_count%>
 
-== render 'shop' + @shop.id.to_s
+<%= render "shop#{@shop.id.to_s}" %>
 
