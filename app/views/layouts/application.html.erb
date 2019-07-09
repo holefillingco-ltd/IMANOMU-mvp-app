@@ -4,12 +4,32 @@
     <title>IMANOMUMvpApp</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/css/swiper.min.css" rel="stylesheet">
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
+    <nav class="navbar navbar-dark" style='background-color: rgb(97, 96, 96);'>
+      <a href="#" class="navbar-brand">
+        <%= image_tag("holefilling.png", :size => "30x30") %> IMANOMU
+      </a>
+      <button class="navbar-toggler" type="button"
+          data-toggle="collapse"
+          data-target="#navmenu1"
+          aria-controls="navmenu1"
+          aria-expanded="false"
+          aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navmenu1">
+        <div class="navbar-nav">
+          <a class="nav-item nav-link" href="/shops">探す</a>
+          <a class="nav-item nav-link" href="#">店舗の方はこちら</a>
+          <a class="nav-item nav-link" href="/">TOP</a>
+        </div>
+      </div>
+    </nav>
     <%= yield %>
   </body>
 </html>

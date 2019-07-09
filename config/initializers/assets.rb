@@ -9,7 +9,8 @@ Rails.application.config.assets.version = '1.0'
 Rails.application.config.assets.paths << Rails.root.join('node_modules')
 # owner_showで読み込むjs
 Rails.application.config.assets.precompile += %w( owner_show.js.erb )
-Rails.application.config.assets.precompile += %w( user_show.js.erb )
+Rails.application.config.assets.precompile += %w( user_show1.js.erb )
+Rails.application.config.assets.precompile += %w( user_show2.js.erb )
 
 # Precompile additional assets.
 # application.js, application.css, and all non-JS/CSS in the app/assets
