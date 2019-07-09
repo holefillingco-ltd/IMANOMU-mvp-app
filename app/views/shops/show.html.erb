@@ -1,6 +1,5 @@
-<%= javascript_include_tag "user_show.js" %>
+<%= javascript_include_tag "user_show#{@shop.id}.js" %>
 <p id='notice'><%= notice %></p>
-<h1><%= @shop.name %></h1>
 <div class='container'>
   <div class='row'>
       <div class='shop_box'>

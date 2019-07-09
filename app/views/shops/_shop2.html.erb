@@ -1,0 +1,33 @@
+<div class='all_tables'>
+<% @shop.tables.each do |table| %>
+  <div id='yakizakana<%= table.id %>' class='table <%= table.vacancy_status %>'>
+    <%= table.capacity %>
+    <p class='imanomu_count<%= table.id %>'><%= table.imanomus.where(display: 1).count %></p>
+  </div>
+  <div id='table_yakizakana<%= table.id %>' class='imanomu_modal'>
+    <%= table.capacity %>
+    <%= table.table_type %>
+    <%= session[:user_token] %>
+    <%= form_for(@imanomu) do |f| %>
+      <%= f.hidden_field :shop_id, :value => @shop.id %>
+      <%= f.hidden_field :table_id, :value => table.id %>
+      <%= f.hidden_field :u_id, :value => session[:user_token] %>
+      <% if Imanomu.where(display: 1, shop_id: @shop.id, table_id: table.id, u_id: session[:user_token]).first.present? %>
+          <p>このページを店員にお見せください！</p>
+        <% else %>
+          <%= f.submit "IMANOMU" %>
+      <% end %>
+    <% end %>
+  </div>
+  <div id='table_status_yakizakana<%= table.id %>' class='status_modal'>
+    <%= table.capacity %>
+    <%= table.table_type %>
+    <%= form_tag('/table', method:'put') do %>
+      <%= select_tag 'vacancy_status', options_for_select([['空席', 'vacan'], ['在席', 'fill']])%>
+      <%= hidden_field_tag :id, table.id %>
+      <%= submit_tag "変更" %>
+    <% end %>
+  </div>
+<% end %>
+</div>
+<div id="overlay"></div>
