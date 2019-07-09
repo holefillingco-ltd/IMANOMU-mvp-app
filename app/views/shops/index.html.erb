@@ -18,11 +18,11 @@
         <p class='detail'><span>価格帯： </span><%= shop.price_range %> 円</p><br>
         <%= link_to (shop_path(shop)), style: "text-decoration: none;" do %>
           <% if shop.vacancy_status == '空席あり'%>
-            <h1 class='shop_vacan'><%= fa_icon 'dot-circle-o' %><%= shop.vacancy_status %></h1>
+            <h1 class='shop_vacan'><%= fa_icon 'dot-circle-o' %> <%= shop.vacancy_status %></h1>
           <% elsif shop.vacancy_status == '空席わずか'%>
-            <h1 class='shop_middle'><%= fa_icon 'exclamation-triangle' %><%= shop.vacancy_status %></h1>
+            <h1 class='shop_middle'><%= fa_icon 'exclamation-triangle' %> <%= shop.vacancy_status %></h1>
           <% else %>
-            <h1 class='shop_fill'><%= fa_icon 'ban' %><%= shop.vacancy_status %></h1>
+            <h1 class='shop_fill'><%= fa_icon 'ban' %> <%= shop.vacancy_status %></h1>
           <% end %>
         <% end %>
       </div>

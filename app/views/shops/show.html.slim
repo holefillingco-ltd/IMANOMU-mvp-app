@@ -1,8 +1,0 @@
-= javascript_include_tag "user_show"
-
-p#notice = notice
-
-p = @shop.name
-=< link_to 'Back', shops_path
-
-== render 'shop' + @shop.id.to_s

@@ -1,0 +1,55 @@
+<%= javascript_include_tag "user_show.js" %>
+<p id='notice'><%= notice %></p>
+<h1><%= @shop.name %></h1>
+<div class='container'>
+  <div class='row'>
+      <div class='shop_box'>
+        <%= link_to (shop_path(@shop)), style: "text-decoration: none;" do %>
+          <p class='shop_name'><%= @shop.name %></p>
+        <% end %>
+        <div class='swiper-container top-carousel'>
+          <div class='swiper-wrapper'>
+            <% @shop.images.each do |image| %>
+              <%= image_tag(image.url, :class => 'swiper-slide') %>
+            <% end %>
+          </div>
+        </div>
+        <p class='detail'><span>ジャンル： </span><%= @shop.genre %></p><br>
+        <p class='detail'><span>住所： </span><%= @shop.address %></p><br>
+        <p class='detail'><span>営業時間： </span><%= @shop.start_time %>〜<%= @shop.close_time %></p><br>
+        <p class='detail'><span>価格帯： </span><%= @shop.price_range %> 円</p><br>
+        <%= link_to (shop_path(@shop)), style: "text-decoration: none;" do %>
+          <% if @shop.vacancy_status == '空席あり'%>
+            <h1 class='shop_vacan'><%= fa_icon 'dot-circle-o' %> <%= @shop.vacancy_status %></h1>
+          <% elsif @shop.vacancy_status == '空席わずか'%>
+            <h1 class='shop_middle'><%= fa_icon 'exclamation-triangle' %> <%= @shop.vacancy_status %></h1>
+          <% else %>
+            <h1 class='shop_fill'><%= fa_icon 'ban' %> <%= @shop.vacancy_status %></h1>
+          <% end %>
+        <% end %>
+      </div>
+  </div>
+</div>
+<%= javascript_include_tag "https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/js/swiper.min.js"%>
+<script>
+var mySwiper = new Swiper('.swiper-container', {
+    pagination: '.swiper-pagination',
+    paginationClickable: true,
+    autoplay: {
+      delay: 2500,
+      disableOnInteraction: false,
+      reverseDirection: false
+    },
+    loop: true,
+    slidesPerView: 3,
+    centeredSlides : true,
+    slideToClickedSlide: true,
+    spaceBetween: 10,
+    breakpoints: {
+      543: {
+        slidesPerView: 2
+      }
+    }
+  });
+</script>
+<%= render "shop#{@shop.id.to_s}" %>
