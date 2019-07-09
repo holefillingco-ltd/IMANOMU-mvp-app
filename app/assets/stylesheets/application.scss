@@ -58,6 +58,41 @@
   font-weight: bold;
   font-family :Quicksand, sans-serif;
 }
+.section1 {
+  width: 80%;
+  margin: 120px auto;
+  text-align: center;
+}
+.how_use1 {
+  position: relative;
+  font-weight: bold;
+  line-height: 1.4;
+  padding:0.25em 1em;
+  display: inline-block;
+  white-space: nowrap;
+  top:0;
+}
+.how_use1:before, .how_use1:after { 
+  position: absolute;
+  top: 0;
+  content:'';
+  width: 8px;
+  height: 100%;
+  display: inline-block;
+}
+.how_use1:before {
+  border-left: solid 1px black;
+  border-top: solid 1px black;
+  border-bottom: solid 1px black;
+  left: 0;
+}
+.how_use1:after {
+  content: '';
+  border-top: solid 1px black;
+  border-right: solid 1px black;
+  border-bottom: solid 1px black;
+  right: 0;
+}
 // 座席一覧
 .all_tables {
   margin: 0 auto;
