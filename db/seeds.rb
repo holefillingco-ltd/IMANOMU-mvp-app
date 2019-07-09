@@ -159,6 +159,22 @@ Image.create!(
     {
       shop_id: 1,
       url: "1/北新地5.jpg"
+    },
+    {
+      shop_id: 2,
+      url: "2/焼魚食堂.jpg"
+    },
+    {
+      shop_id: 2,
+      url: "2/焼魚食堂1.jpg"
+    },
+    {
+      shop_id: 2,
+      url: "2/焼魚食堂2.jpg"
+    },
+    {
+      shop_id: 2,
+      url: "2/焼魚食堂4.jpg"
     }
   ]
 )
