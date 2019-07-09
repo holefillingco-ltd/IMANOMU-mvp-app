@@ -34,3 +34,10 @@
   <p>行きたいお店の席が空いていたらIMANOMUを送ろう!!</p>
   <p>*店舗側に通知はされますが予約を確定させるものではありません*</p>
 </div>
+<div class='ps_form'>
+  <h4>店舗様はこちらにお渡ししたパスワードを入力下さい</h4>
+  <%= form_tag('/owner_show', :method => 'get') do%>
+    <%= text_field_tag :password, '', class: 't_form', placeholder: 'パスワード' %>
+    <%= button_tag 'ENTER', class: 's_btn'%>
+  <% end %>
+</div>

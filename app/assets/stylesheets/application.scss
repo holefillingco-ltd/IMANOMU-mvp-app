@@ -174,6 +174,26 @@ path.two {
 .warn {
   margin: 20px auto;
   text-align: center;
+  margin-bottom: 80px;
+}
+.ps_form {
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 50px;
+}
+.s_btn {
+  display: inline-block;
+  padding: 0.3em 1em;
+  text-decoration: none;
+  color: #67c5ff;
+  border: solid 2px #67c5ff;
+  border-radius: 3px;
+  transition: .4s;
+}
+
+.s_btn:hover {
+  background: #67c5ff;
+  color: white;
 }
 // 座席一覧
 .all_tables {
@@ -181,6 +201,89 @@ path.two {
   margin-top: 50px;
   width: 80%;
   height: auto;
+}
+/* 焼き魚 */
+#yakizakana17 {
+  width: 15%;
+  height: 200px;
+  position: relative;
+  left: 0%;
+}
+#yakizakana18 {
+  width: 15%;
+  height: 200px;
+  position: relative;
+  left: 20%;
+  bottom: 216px;
+}
+#yakizakana19 {
+  width: 15%;
+  height: 200px;
+  position: relative;
+  left: 65%;  
+  bottom: 432px;
+}
+#yakizakana20 {
+  width: 15%;
+  height: 200px;
+  position: relative;
+  left: 85%;
+  bottom: 648px;
+}
+#yakizakana21 {
+  width: 8%;
+  height: 120px;
+  position: relative;
+  left: 40%;
+  bottom: 822px;
+}
+#yakizakana22 {
+  width: 8%;
+  height: 120px;
+  position: relative;
+  left: 52%;
+  bottom: 958px;
+}
+#yakizakana23 {
+  width: 8%;
+  height: 100px;
+  position: relative;
+  left: 0%;
+  bottom: 810px;
+}
+#yakizakana24 {
+  width: 8%;
+  height: 100px;
+  position: relative;
+  left: 16%;
+  bottom: 926px;
+}
+#yakizakana25 {
+  width: 8%;
+  height: 100px;
+  position: relative;
+  left: 32%;
+  bottom: 1042px;
+}
+#yakizakana26 {
+  width: 8%;
+  height: 100px;
+  position: relative;
+  left: 48%;
+  bottom: 1158px;
+}
+#yakizakana27 {
+  width: 8%;
+  height: 100px;
+  position: relative;
+  left: 65%;
+  bottom: 1274px;
+}
+#yakizakana28 {
+  width: 8%;
+  height: 100px;
+  position: relative;
+  bottom: 1209px;
 }
 /* 鳥屋 */
 #toriya1,#toriya2,#toriya3,#toriya4,#toriya5,#toriya6  {
@@ -291,4 +394,43 @@ path.two {
   .swiper-button-next {
     display: block;
   }
+}
+// owner_show
+.owner_name {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  position: relative;
+  padding:0 0 0.5em 0.7em;
+  border-bottom: 1px solid black;
+}
+.owner_name::after {
+  position: absolute;
+  top: 0.2em;
+  left:0;
+  content: '';
+  width: 5px;
+  height:1em;
+  background-color: #446689;
+}
+.owner_count {
+  position: relative;
+  display: inline-block;
+  padding: 0 45px;
+}
+.owner_count:before, .owner_count:after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  display: inline-block;
+  width: 44px;
+  height: 2px;
+  background-color: black;
+  -webkit-transform: rotate(-60deg);
+  transform: rotate(-60deg);
+}
+.owner_count:before {
+  left:0;
+}
+.owner_count:after {
+  right: 0;
 }
