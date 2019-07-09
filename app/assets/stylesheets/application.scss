@@ -16,6 +16,14 @@
  */
 @import 'bootstrap';
 
+// header
+.navbar {
+  margin-bottom: 50px;
+}
+.nav-item {
+  text-align: center;
+}
+// 座席一覧
 .all_tables {
   margin: 0 auto;
   margin-top: 50px;
@@ -95,7 +103,7 @@
 }
 .detail {
   margin: 0;
-  font-size: 10px;
+  font-size: 16px;
 }
 .detail span {
   display: inline-block;
@@ -124,4 +132,11 @@
   color: white;/*文字を白に*/
   border-radius: 0.5em;/*角の丸み*/
   text-align: center;
+}
+// Swiper
+@media (min-width: 768px) {
+  .swiper-button-prev,
+  .swiper-button-next {
+    display: block;
+  }
 }
