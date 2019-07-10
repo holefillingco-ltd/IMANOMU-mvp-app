@@ -434,3 +434,62 @@ path.two {
 .owner_count:after {
   right: 0;
 }
+// user_show
+.head_test {
+  margin:  0;                 /* デフォルトCSS打ち消し */
+  margin-top: 30px;
+  font-size:  24px;           /* 文字サイズ指定 */
+  position:  relative;        /* 位置調整 */
+  font-weight:  normal;       /* 文字の太さ調整 */
+  display:  inline-block;     /* インラインブロックにする */
+  padding-top: 40px;          /* 余白指定 */
+  padding-left: 40px;         /* 余白指定 */
+  padding-bottom: 20px;       /* 余白指定 */
+  left: 8%;
+}
+.head_test:before {
+  content:  '';               /* 空白の要素を作る */
+  background-color: #ffeaac;  /* 背景色指定 */
+  display:  block;            /* ブロック要素にする */
+  position:  absolute;        /* 位置調整 */
+  left:  0;                   /* 位置調整 */
+  height: 90px;               /* 高さ指定 */
+  width: 90px;                /* 幅指定 */
+  border-radius:  50%;        /* 丸くする */
+  top: 0;                     /* 位置調整 */
+  z-index:  -1;               /* 重なり調整 */
+}
+.balloon4 {
+  position: relative;
+  margin: 2em 0 2em 40px;
+  padding: 15px;
+  background: #fff0c6;
+  border-radius: 30px;
+  width: 50%;
+  position: relative;
+  left: 24%;
+}
+.balloon4:before {  
+  content: "";
+  position: absolute;
+  left: -38px;
+  width: 13px;
+  height: 12px;
+  bottom: 0;
+  background: #fff0c6;
+  border-radius: 50%;
+}
+.balloon4:after {
+  content: "";
+  position: absolute;
+  left: -24px;
+  width: 20px;
+  height: 18px;
+  bottom: 3px;
+  background: #fff0c6;
+  border-radius: 50%;
+}
+.balloon4 p {
+  margin: 0; 
+  padding: 0;
+}
