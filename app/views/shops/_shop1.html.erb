@@ -7,7 +7,6 @@
   <div id='table_toriya<%= table.id %>' class='imanomu_modal'>
     <%= table.capacity %>
     <%= table.table_type %>
-    <%= session[:user_token] %>
     <%= form_for(@imanomu) do |f| %>
       <%= f.hidden_field :shop_id, :value => @shop.id %>
       <%= f.hidden_field :table_id, :value => table.id %>
