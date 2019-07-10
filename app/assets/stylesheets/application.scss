@@ -22,7 +22,7 @@
 }
 // TOPページ
 .top_image {
-  background-image: url(/images/top_page.jpg);
+  background-image: url("/images/top_page.jpg");
   background-position: center center;
   background-repeat:  no-repeat;
   background-size: cover;
@@ -48,7 +48,6 @@
   position: absolute;
   top: 63%;
   left: 50%;
-  white-space: nowrap;
   -ms-transform: translate(-50%,-50%);
   -webkit-transform: translate(-50%,-50%);
   transform: translate(-50%,-50%);
@@ -68,7 +67,6 @@
   line-height: 1.4;
   padding:0.25em 1em;
   display: inline-block;
-  white-space: nowrap;
   color: #fac06a;
   top:0;
 }
@@ -104,7 +102,7 @@
 }
 .cta {
   display: flex;
-  padding: 10px 45px;
+  padding: 4px 40px;
   font-family: 'Poppins', sans-serif;
   font-size: 40px;
   color: white;
@@ -190,7 +188,6 @@ path.two {
   border-radius: 3px;
   transition: .4s;
 }
-
 .s_btn:hover {
   background: #67c5ff;
   color: white;
@@ -199,122 +196,259 @@ path.two {
 .all_tables {
   margin: 0 auto;
   margin-top: 50px;
-  width: 80%;
   height: auto;
 }
+.tables_wrap {
+  overflow: auto;
+  position: relative;
+}
 /* 焼き魚 */
-#yakizakana17 {
-  width: 15%;
+#wrap_17 {
+  width: 200px;
   height: 200px;
   position: relative;
   left: 0%;
 }
-#yakizakana18 {
-  width: 15%;
+#wrap_18 {
+  width: 200px;
   height: 200px;
   position: relative;
-  left: 20%;
-  bottom: 216px;
+  left: 250px;
+  bottom: 200px;
 }
-#yakizakana19 {
-  width: 15%;
+#wrap_19 {
+  width: 200px;
   height: 200px;
   position: relative;
-  left: 65%;  
-  bottom: 432px;
+  left: 876px;  
+  bottom: 400px;
 }
-#yakizakana20 {
-  width: 15%;
+#wrap_20 {
+  width: 200px;
   height: 200px;
   position: relative;
-  left: 85%;
-  bottom: 648px;
+  left: 1150px;
+  bottom: 600px;
 }
-#yakizakana21 {
-  width: 8%;
+#wrap_21 {
+  width: 100px;
   height: 120px;
   position: relative;
-  left: 40%;
-  bottom: 822px;
+  left: 534px;
+  bottom: 800px;
 }
-#yakizakana22 {
-  width: 8%;
+#wrap_22 {
+  width: 100px;
   height: 120px;
   position: relative;
-  left: 52%;
-  bottom: 958px;
+  left: 700px;
+  bottom: 920px;
 }
-#yakizakana23 {
-  width: 8%;
+#wrap_23 {
+  width: 100px;
   height: 100px;
   position: relative;
   left: 0%;
-  bottom: 810px;
+  bottom: 700px;
 }
-#yakizakana24 {
-  width: 8%;
+#wrap_24 {
+  width: 100px;
   height: 100px;
   position: relative;
-  left: 16%;
-  bottom: 926px;
+  left: 202px;
+  bottom: 800px;
 }
-#yakizakana25 {
-  width: 8%;
+#wrap_25 {
+  width: 100px;
   height: 100px;
   position: relative;
-  left: 32%;
-  bottom: 1042px;
+  left: 400px;
+  bottom: 900px;
 }
-#yakizakana26 {
-  width: 8%;
+#wrap_26 {
+  width: 100px;
   height: 100px;
   position: relative;
-  left: 48%;
-  bottom: 1158px;
+  left: 600px;
+  bottom: 1000px;
 }
-#yakizakana27 {
-  width: 8%;
+#wrap_27 {
+  width: 100px;
   height: 100px;
   position: relative;
-  left: 65%;
-  bottom: 1274px;
+  left: 800px;
+  bottom: 1100px;
 }
+#wrap_28 {
+  width: 100px;
+  height: 100px;
+  position: relative;
+  bottom: 1035px;
+}
+#yakizakana17, 
+#yakizakana18, 
+#yakizakana19, 
+#yakizakana20, 
+#yakizakana21, 
+#yakizakana22, 
+#yakizakana23, 
+#yakizakana24, 
+#yakizakana25, 
+#yakizakana26, 
+#yakizakana27, 
 #yakizakana28 {
-  width: 8%;
-  height: 100px;
-  position: relative;
-  bottom: 1209px;
+  width: 100%;
+  height: 100%;
+  background-image: url("/images/table.jpg");
+  opacity: 0.5;
+  text-align: center;
+  line-height: 41px;
 }
 /* 鳥屋 */
-#toriya1,#toriya2,#toriya3,#toriya4,#toriya5,#toriya6  {
-  width: 12%;
-  height: 60px;
-  margin: 30px;
-  float: left;
-}
-#toriya7 {
+#wrap_1 {
   width: 200px;
-  height: 90px;
-  margin: 30px;
-  float: left;
+  height: 200px;
+  position: relative;
+  left: 0%;
 }
-#toriya8 {
+#wrap_2 {
+  width: 200px;
+  height: 200px;
+  position: relative;
+  left: 250px;
+  bottom: 200px;
+}
+#wrap_3 {
+  width: 200px;
+  height: 200px;
+  position: relative;
+  left: 500px;
+  bottom: 400px;
+}
+#wrap_4 {
+  width: 200px;
+  height: 200px;
+  position: relative;
+  left: 750px;
+  bottom: 600px;
+}
+#wrap_5 {
+  width: 200px;
+  height: 200px;
+  position: relative;
+  left: 1000px;
+  bottom: 800px;
+}
+#wrap_6 {
+  width: 200px;
+  height: 200px;
+  position: relative;
+  left: 1250px;
+  bottom: 1000px;
+}
+#wrap_7 {
+  width: 300px;
+  height: 200px;
+  position: relative;
+  left: 0%;
+  bottom: 940px;
+}
+#wrap_8 {
+  width: 200px;
+  height: 150px;
+  position: relative;
+  left: 0%;
+  bottom: 891px;
+}
+#wrap_9 {
   width: 100px;
-  height: 60px;
-  margin: 30px;
-  float: left;
+  height: 100px;
+  position: relative;
+  left: 0%;
+  bottom: 840px;
 }
-#toriya9,#toriya10,#toriya11,#toriya12,#toriya13,#toriya14,#toriya15,#toriya16 {
-  width: 70px;
-  height: 70px;
-  margin: 30px;
-  float: left;
+#wrap_10 {
+  width: 100px;
+  height: 100px;
+  position: relative;
+  left: 150px;
+  bottom: 940px;
+}
+#wrap_11 {
+  width: 100px;
+  height: 100px;
+  position: relative;
+  left: 300px;
+  bottom: 1040px;
+}
+#wrap_12 {
+  width: 100px;
+  height: 100px;
+  position: relative;
+  left: 450px;
+  bottom: 1140px;
+}
+#wrap_13 {
+  width: 100px;
+  height: 100px;
+  position: relative;
+  left: 600px;
+  bottom: 1240px;
+}
+#wrap_14 {
+  width: 100px;
+  height: 100px;
+  position: relative;
+  left: 750px;
+  bottom: 1340px;
+}
+#wrap_15 {
+  width: 100px;
+  height: 100px;
+  position: relative;
+  left: 900px;
+  bottom: 1440px;
+}
+#wrap_16 {
+  width: 100px;
+  height: 100px;
+  position: relative;
+  left: 1050px;
+  bottom: 1540px;
+}
+#toriya1,
+#toriya2,
+#toriya3,
+#toriya4,
+#toriya5,
+#toriya6,
+#toriya7,
+#toriya8,
+#toriya9,
+#toriya10,
+#toriya11,
+#toriya12,
+#toriya13,
+#toriya14,
+#toriya15,
+#toriya16 {
+  width: 100%;
+  height: 100%;
+  background-image: url("/images/table.jpg");
+  opacity: 0.5;
+  text-align: center;
+  line-height: 41px;
+}
+.table_cap {
+  color: #ff0000;
+  font-weight: bold;
+  font-size: 20px;
 }
 .vacan {
-  background-color: gray;
+  background: gray;
 }
 .fill {
-  background-color: red;
+  background: red;
 }
 #overlay {
   width: 100%;
@@ -332,15 +466,17 @@ path.two {
   z-index: 2;
   top: 50%;
   left: 50%;
-  width: 50%;
+  width: 500px;
   transform: translate(-50%, -50%);
   background-color: rgb(210, 243, 238);
-  height: 500px;
   padding: 3em;
   border: solid 5px white;
   border-radius: 10px;
   overflow-y: auto;
   max-height: 90%;
+}
+.modal-body {
+  text-align: center;
 }
 // shops_index
 .shop_box {

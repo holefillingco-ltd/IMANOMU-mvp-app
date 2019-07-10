@@ -1,4 +1,4 @@
-<%= javascript_include_tag "user_show#{@shop.id}.js" %>
+<%= javascript_include_tag "user_show.js" %>
 <p id='notice'><%= notice %></p>
 <div class='container'>
   <div class='row'>
@@ -28,7 +28,6 @@
         <% end %>
       </div>
   </div>
-</div>
 <%= javascript_include_tag "https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/js/swiper.min.js"%>
 <script>
 var mySwiper = new Swiper('.swiper-container', {
@@ -53,6 +52,9 @@ var mySwiper = new Swiper('.swiper-container', {
 </script>
 <h2 class='head_test'>座席一覧</h2>
 <div class="balloon4">
-  <p>行きたいお店が決まれば座席にIMAONMUを送ろう！</p>
+  <p>行きたいお店が決まれば<button type="button" class="btn btn-success">IMANOMU</button>を座席にを送ろう！</p>
+  <p>店員さんが座席を空けておいてくれるかも！</p>
 </div>
+<%= fa_icon 'arrow-circle-left 5x' %>
+<%= fa_icon 'arrow-circle-right 5x' %>
 <%= render "shop#{@shop.id.to_s}" %>
