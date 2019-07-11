@@ -22,7 +22,7 @@
 }
 // TOPページ
 .top_image {
-  background-image: url(/images/top_page.jpg);
+  background-image: image-url("top_page.jpg");
   background-position: center center;
   background-repeat:  no-repeat;
   background-size: cover;
