@@ -8,7 +8,7 @@
         <div class='swiper-container top-carousel'>
           <div class='swiper-wrapper'>
             <% shop.images.each do |image| %>
-              <%= image_tag asset_path(image.url), :class => 'swiper-slide' %>
+              <%= image_tag(image.url, :class => 'swiper-slide') %>
             <% end %>
           </div>
         </div>
