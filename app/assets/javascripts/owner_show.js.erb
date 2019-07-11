@@ -1,9 +1,8 @@
 $(function(){
   function buildTABLE(table) {
     $(`.imanomu_count${table.id}`).text(Object.keys(table['imanomus']).length);
-    $(`#toriya${table.id}`).removeClass();
-    $(`#toriya${table.id}`).addClass('table');
-    $(`#toriya${table.id}`).addClass(`${table.vacancy_status}`);
+    $(`#wrap_${table.id}`).removeClass();
+    $(`#wrap_${table.id}`).addClass(`${table.vacancy_status}`);
   }
   $(function(){
     setInterval(getTablesStatus, 60000);
@@ -25,7 +24,7 @@ $(function(){
   $('.table').click(function(){
     var id = $(this).attr('id');
     $('#overlay').fadeIn();
-    $(`#table_${id}`).fadeIn();
+    $(`#table_status_${id}`).fadeIn();
   });
   $('#overlay').click(function(){
     var id = $(this).attr('id');

@@ -1,4 +1,4 @@
-<%= javascript_include_tag "owner_show#{@shop.id}.js" %>
+<%= javascript_include_tag "owner_show.js" %>
 <div class='container'>
 <h1 class='owner_name'><%= @shop.name%> 様ページ</h1>
 <% imanomu_count = 0 %>
@@ -57,4 +57,5 @@ var mySwiper = new Swiper('.swiper-container', {
     }
   });
 </script>
+<h2 class='head_test'>座席一覧</h2>
 <%= render "shop#{@shop.id.to_s}" %>

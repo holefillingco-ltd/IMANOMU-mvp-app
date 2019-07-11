@@ -1,9 +1,8 @@
 $(function(){
   function buildTABLE(table) {
     $(`.imanomu_count${table.id}`).text(Object.keys(table['imanomus']).length);
-    $(`#yakizakana${table.id}`).removeClass();
-    $(`#yakizakana${table.id}`).addClass('table');
-    $(`#yakizakana${table.id}`).addClass(`${table.vacancy_status}`);
+    $(`#wrap_${table.id}`).removeClass();
+    $(`#wrap_${table.id}`).addClass(`${table.vacancy_status}`);
   }
   $(function(){
     setInterval(getTablesStatus, 60000);
