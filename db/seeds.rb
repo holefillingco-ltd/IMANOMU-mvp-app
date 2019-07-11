@@ -142,39 +142,39 @@ Image.create!(
   [
     {
       shop_id: 1,
-      url: "/images/1/北新地1.jpg"
+      url: "1/北新地1.jpg"
     },
     {
       shop_id: 1,
-      url: "/images/1/北新地.jpg"
+      url: "1/北新地.jpg"
     },
     {
       shop_id: 1,
-      url: "/images/1/北新地2.jpg"
+      url: "1/北新地2.jpg"
     },
     {
       shop_id: 1,
-      url: "/images/1/北新地4.jpg"
+      url: "1/北新地4.jpg"
     },
     {
       shop_id: 1,
-      url: "/images/1/北新地5.jpg"
+      url: "1/北新地5.jpg"
     },
     {
       shop_id: 2,
-      url: "/images/2/焼魚食堂.jpg"
+      url: "2/焼魚食堂.jpg"
     },
     {
       shop_id: 2,
-      url: "/images/2/焼魚食堂1.jpeg"
+      url: "2/焼魚食堂1.jpeg"
     },
     {
       shop_id: 2,
-      url: "/images/2/焼魚食堂2.jpeg"
+      url: "2/焼魚食堂2.jpeg"
     },
     {
       shop_id: 2,
-      url: "/images/2/焼魚食堂4.jpeg"
+      url: "2/焼魚食堂4.jpeg"
     }
   ]
 )
