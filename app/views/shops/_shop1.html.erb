@@ -1,10 +1,10 @@
-<div class='all_tables'>
+<div class='all_tables shop01_height'>
   <div class='tables_wrap'>
     <% @shop.tables.each do |table| %>
     <div id='wrap_<%= table.id %>' class='<%= table.vacancy_status %>'>
       <div id='toriya<%= table.id %>' class='table'>
         <p class='table_cap'><%= table.capacity %>名様</p>
-        <p class='imanomu_count<%= table.id %>'>注目度：<%= table.imanomus.where(display: 1).count %></p>
+        <span class='badge badge-pill badge-warning imanomu_count imanomu_count<%= table.id %>'><%= table.imanomus.where(display: 1).count %></span>
       </div>
     </div>
       <div id='table_toriya<%= table.id %>' class='imanomu_modal'>

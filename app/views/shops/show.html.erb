@@ -1,6 +1,8 @@
 <%= javascript_include_tag "user_show.js" %>
 
-<p id='notice'><%= notice %></p>
+<% if !notice.blank? %>
+  <p id='notice' class="alert alert-success"><%= notice %></p>
+<% end %>
 <div class='container'>
 <%= javascript_include_tag "https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/js/swiper.min.js"%>
 <script>
@@ -24,6 +26,7 @@ var mySwiper = new Swiper('.swiper-container', {
     }
   });
 </script>
+<h1 class="h4 font-weight-bold border-bottom py-2"><%= @shop.name %></h1>
 <h2 class='head_test'>座席一覧</h2>
 <div class="balloon4">
   <p>行きたいお店が決まれば<button type="button" class="btn btn-success">IMANOMU</button>を座席にを送ろう！</p>
