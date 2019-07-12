@@ -12,14 +12,14 @@
 
 ActiveRecord::Schema.define(version: 2019_06_25_172928) do
 
-  create_table "images", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+  create_table "images", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|
     t.integer "shop_id", null: false
     t.string "url", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
-  create_table "imanomus", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+  create_table "imanomus", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|
     t.integer "shop_id", null: false
     t.integer "table_id", null: false
     t.string "u_id", null: false
@@ -28,7 +28,7 @@ ActiveRecord::Schema.define(version: 2019_06_25_172928) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "shops", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+  create_table "shops", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|
     t.text "shop_id", null: false
     t.string "phone_number", null: false
     t.text "name", null: false
@@ -47,9 +47,10 @@ ActiveRecord::Schema.define(version: 2019_06_25_172928) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "tables", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+  create_table "tables", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|
     t.integer "shop_id", null: false
     t.integer "capacity", null: false
+    t.boolean "reserved", default: false, null: false
     t.integer "table_type", null: false
     t.integer "vacancy_status", default: 0, null: false
     t.datetime "created_at", null: false
