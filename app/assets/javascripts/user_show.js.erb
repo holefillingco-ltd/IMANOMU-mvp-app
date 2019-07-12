@@ -1,6 +1,10 @@
 $(function(){
   function buildTABLE(table) {
-    $(`.imanomu_count${table.id}`).text(Object.keys(table['imanomus']).length);
+    if (Object.keys(table['imanomus']).length > 99) {
+      $(`.imanomu_count${table.id}`).text('99+');
+    } else {
+      $(`.imanomu_count${table.id}`).text(Object.keys(table['imanomus']).length);
+    }
     $(`#wrap_${table.id}`).removeClass();
     $(`#wrap_${table.id}`).addClass(`${table.vacancy_status}`);
   }
