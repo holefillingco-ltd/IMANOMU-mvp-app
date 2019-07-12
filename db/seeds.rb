@@ -166,15 +166,15 @@ Image.create!(
     },
     {
       shop_id: 2,
-      url: "2/焼魚食堂1.jpeg"
+      url: "2/焼魚食堂1.jpg"
     },
     {
       shop_id: 2,
-      url: "2/焼魚食堂2.jpeg"
+      url: "2/焼魚食堂2.jpg"
     },
     {
       shop_id: 2,
-      url: "2/焼魚食堂4.jpeg"
+      url: "2/焼魚食堂4.jpg"
     }
   ]
 )
