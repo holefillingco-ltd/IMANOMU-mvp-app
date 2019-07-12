@@ -1,61 +1,59 @@
-<div class='all_tables'>
-  <div class='tables_wrap'>
-    <% @shop.tables.each do |table| %>
-    <div id='wrap_<%= table.id %>' class='<%= table.vacancy_status %>'>
-      <div id='yakizakana<%= table.id %>' class='table'>
-        <p class='table_cap'><%= table.capacity %>名様</p>
-        <p class='imanomu_count<%= table.id %>'>注目度：<%= table.imanomus.where(display: 1).count %></p>
+<div class='all_tables shop02_height'>
+  <% @shop.tables.each do |table| %>
+  <div id='wrap_<%= table.id %>' class='<%= table.vacancy_status %>'>
+    <div id='yakizakana<%= table.id %>' class='table'>
+      <p class='table_cap'><%= table.capacity %>名様</p>
+      <span class='badge badge-pill badge-warning imanomu_count imanomu_count<%= table.id %>'><%= table.imanomus.where(display: 1).count %></span>
+    </div>
+  </div>
+    <div id='table_yakizakana<%= table.id %>' class='imanomu_modal'>
+      <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title"><%= table.capacity %>名様：</h5>
+            </div>
+            <div class="modal-body">
+              <%= table.table_type %>
+            </div>
+            <div class="modal-footer">
+              <%= form_for(@imanomu) do |f| %>
+                <%= f.hidden_field :shop_id, :value => @shop.id %>
+                <%= f.hidden_field :table_id, :value => table.id %>
+                <%= f.hidden_field :u_id, :value => session[:user_token] %>
+                <% if Imanomu.where(display: 1, shop_id: @shop.id, table_id: table.id, u_id: session[:user_token]).first.present? %>
+                    <button type="button" class="btn btn-warning">このページを店員さんにお見せください！</button>
+                  <% else %>
+                    <%= f.submit "IMANOMUを送る", :class=>"btn btn-success" %>
+                <% end %>
+              <% end %>
+            </div>
+          </div>
       </div>
     </div>
-      <div id='table_yakizakana<%= table.id %>' class='imanomu_modal'>
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-              <div class="modal-header">
-                <h5 class="modal-title"><%= table.capacity %>名様：</h5>
-              </div>
-              <div class="modal-body">
-                <%= table.table_type %>
-              </div>
-              <div class="modal-footer">
-                <%= form_for(@imanomu) do |f| %>
-                  <%= f.hidden_field :shop_id, :value => @shop.id %>
-                  <%= f.hidden_field :table_id, :value => table.id %>
-                  <%= f.hidden_field :u_id, :value => session[:user_token] %>
-                  <% if Imanomu.where(display: 1, shop_id: @shop.id, table_id: table.id, u_id: session[:user_token]).first.present? %>
-                      <button type="button" class="btn btn-warning">このページを店員さんにお見せください！</button>
-                    <% else %>
-                      <%= f.submit "IMANOMUを送る", :class=>"btn btn-success" %>
-                  <% end %>
-                <% end %>
-              </div>
+    <div id='table_status_yakizakana<%= table.id %>' class='status_modal'>
+      <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title"><%= table.capacity %>名様：</h5>
             </div>
-        </div>
-      </div>
-      <div id='table_status_yakizakana<%= table.id %>' class='status_modal'>
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-              <div class="modal-header">
-                <h5 class="modal-title"><%= table.capacity %>名様：</h5>
-              </div>
-              <div class="modal-body">
-                <%= table.table_type %>
-              </div>
-              <div class="modal-footer">
-                <%= form_tag('/table', method:'put') do %>
-                  <%= hidden_field_tag :vacancy_status, 'fill' %>
-                  <%= hidden_field_tag :id, table.id %>
-                  <%= submit_tag "在席", :class=>"btn btn-danger" %>
-                <% end %>
-                <%= form_tag('/table', method:'put') do %>
-                  <%= hidden_field_tag :vacancy_status, 'vacan' %>
-                  <%= hidden_field_tag :id, table.id %>
-                  <%= submit_tag "空席", :class=>"btn btn-primary" %>
-                <% end %>
-              </div>
+            <div class="modal-body">
+              <%= table.table_type %>
             </div>
-        </div>
+            <div class="modal-footer">
+              <%= form_tag('/table', method:'put') do %>
+                <%= hidden_field_tag :vacancy_status, 'fill' %>
+                <%= hidden_field_tag :id, table.id %>
+                <%= submit_tag "在席", :class=>"btn btn-danger" %>
+              <% end %>
+              <%= form_tag('/table', method:'put') do %>
+                <%= hidden_field_tag :vacancy_status, 'vacan' %>
+                <%= hidden_field_tag :id, table.id %>
+                <%= submit_tag "空席", :class=>"btn btn-primary" %>
+              <% end %>
+            </div>
+          </div>
       </div>
-    <% end %>
-  </div>
+    </div>
+  <% end %>
 </div>
 <div id="overlay"></div>

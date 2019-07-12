@@ -195,95 +195,103 @@ path.two {
 // 座席一覧
 .all_tables {
   margin: 0 auto;
+  width: 290px;
   margin-top: 50px;
-  height: auto;
-}
-.tables_wrap {
-  overflow: auto;
   position: relative;
+  border: 3px solid;
+  box-sizing: content-box;
+  &.shop01_height {
+    height: 900px;
+  }
+  &.shop02_height {
+    height: 640px;
+  }
 }
+
 /* 焼き魚 */
 #wrap_17 {
-  width: 200px;
-  height: 200px;
-  position: relative;
-  left: 0%;
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  right: 10px;
+  top: 10px;
 }
 #wrap_18 {
-  width: 200px;
-  height: 200px;
-  position: relative;
-  left: 250px;
-  bottom: 200px;
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  right: 10px;
+  top: 290px;
 }
 #wrap_19 {
-  width: 200px;
-  height: 200px;
-  position: relative;
-  left: 876px;  
-  bottom: 400px;
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  right: 10px;
+  top: 410px;
 }
 #wrap_20 {
-  width: 200px;
-  height: 200px;
-  position: relative;
-  left: 1150px;
-  bottom: 600px;
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  right: 10px;
+  top: 530px;
 }
 #wrap_21 {
   width: 100px;
-  height: 120px;
-  position: relative;
-  left: 534px;
-  bottom: 800px;
+  height: 60px;
+  position: absolute;
+  right: 10px;
+  top: 130px;
 }
 #wrap_22 {
   width: 100px;
-  height: 120px;
-  position: relative;
-  left: 700px;
-  bottom: 920px;
+  height: 60px;
+  position: absolute;
+  right: 10px;
+  top: 210px;
 }
 #wrap_23 {
-  width: 100px;
-  height: 100px;
-  position: relative;
-  left: 0%;
-  bottom: 700px;
+  width: 60px;;
+  height: 60px;
+  position: absolute;
+  left: 10px;
+  top: 10px;
 }
 #wrap_24 {
-  width: 100px;
-  height: 100px;
-  position: relative;
-  left: 202px;
-  bottom: 800px;
+  width: 60px;
+  height: 60px;
+  position: absolute;
+  left: 80px;
+  top: 80px;
 }
 #wrap_25 {
-  width: 100px;
-  height: 100px;
-  position: relative;
-  left: 400px;
-  bottom: 900px;
+  width: 60px;
+  height: 60px;
+  position: absolute;
+  left: 80px;
+  top: 160px;
 }
 #wrap_26 {
-  width: 100px;
-  height: 100px;
-  position: relative;
-  left: 600px;
-  bottom: 1000px;
+  width: 60px;
+  height: 60px;
+  position: absolute;
+  left: 80px;
+  top: 240px;
 }
 #wrap_27 {
-  width: 100px;
-  height: 100px;
-  position: relative;
-  left: 800px;
-  bottom: 1100px;
+  width: 60px;
+  height: 60px;
+  position: absolute;
+  left: 80px;
+  top: 320px;
 }
 #wrap_28 {
-  width: 100px;
-  height: 100px;
-  position: relative;
-  bottom: 1035px;
+  width: 60px;
+  height: 60px;
+  position: absolute;
+  left: 80px;
+  top: 400px;
 }
 #yakizakana17, 
 #yakizakana18, 
@@ -300,121 +308,123 @@ path.two {
   width: 100%;
   height: 100%;
   background-image: image-url("table.jpg");
-  opacity: 0.5;
+  opacity: 0.8;
   text-align: center;
   line-height: 41px;
 }
 /* 鳥屋 */
 #wrap_1 {
-  width: 200px;
-  height: 200px;
-  position: relative;
-  left: 0%;
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  left: 10px;
+  top: 10px;
 }
 #wrap_2 {
-  width: 200px;
-  height: 200px;
-  position: relative;
-  left: 250px;
-  bottom: 200px;
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  left: 10px;
+  top: 130px;
 }
 #wrap_3 {
-  width: 200px;
-  height: 200px;
-  position: relative;
-  left: 500px;
-  bottom: 400px;
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  left: 10px;
+  top: 250px;
 }
 #wrap_4 {
-  width: 200px;
-  height: 200px;
-  position: relative;
-  left: 750px;
-  bottom: 600px;
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  left: 10px;
+  top: 370px;
 }
 #wrap_5 {
-  width: 200px;
-  height: 200px;
-  position: relative;
-  left: 1000px;
-  bottom: 800px;
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  left: 10px;
+  top: 490px;
 }
 #wrap_6 {
-  width: 200px;
-  height: 200px;
-  position: relative;
-  left: 1250px;
-  bottom: 1000px;
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  left: 10px;
+  top: 610px;
 }
 #wrap_7 {
-  width: 300px;
-  height: 200px;
-  position: relative;
-  left: 0%;
-  bottom: 940px;
+  width: 100px;
+  height: 160px;
+  position: absolute;
+  left: 60px;
+  bottom: 10px;
+
 }
 #wrap_8 {
-  width: 200px;
+  width: 100px;
   height: 150px;
-  position: relative;
-  left: 0%;
-  bottom: 891px;
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
 }
 #wrap_9 {
-  width: 100px;
-  height: 100px;
-  position: relative;
-  left: 0%;
-  bottom: 840px;
+  width: 60px;
+  height: 60px;
+  position: absolute;
+  right: 10px;
+  top: 10px;
 }
 #wrap_10 {
-  width: 100px;
-  height: 100px;
-  position: relative;
-  left: 150px;
-  bottom: 940px;
+  width: 60px;
+  height: 60px;
+  position: absolute;
+  right: 10px;
+  top: 90px;
 }
 #wrap_11 {
-  width: 100px;
-  height: 100px;
-  position: relative;
-  left: 300px;
-  bottom: 1040px;
+  width: 60px;
+  height: 60px;
+  position: absolute;
+  right: 10px;
+  top: 170px;
 }
 #wrap_12 {
-  width: 100px;
-  height: 100px;
-  position: relative;
-  left: 450px;
-  bottom: 1140px;
+  width: 60px;
+  height: 60px;
+  position: absolute;
+  right: 10px;
+  top: 250px;
 }
 #wrap_13 {
-  width: 100px;
-  height: 100px;
-  position: relative;
-  left: 600px;
-  bottom: 1240px;
+  width: 60px;
+  height: 60px;
+  position: absolute;
+  right: 10px;
+  top: 330px;
 }
 #wrap_14 {
-  width: 100px;
-  height: 100px;
-  position: relative;
-  left: 750px;
-  bottom: 1340px;
+  width: 60px;
+  height: 60px;
+  position: absolute;
+  right: 10px;
+  top: 410px;
 }
 #wrap_15 {
-  width: 100px;
-  height: 100px;
-  position: relative;
-  left: 900px;
-  bottom: 1440px;
+  width: 60px;
+  height: 60px;
+  position: absolute;
+  right: 10px;
+  top: 490px;
 }
 #wrap_16 {
-  width: 100px;
-  height: 100px;
-  position: relative;
-  left: 1050px;
-  bottom: 1540px;
+  width: 60px;
+  height: 60px;
+  position: absolute;
+  right: 10px;
+  top: 570px;
 }
 #toriya1,
 #toriya2,
@@ -435,15 +445,25 @@ path.two {
   width: 100%;
   height: 100%;
   background-image: image-url("table.jpg");
-  opacity: 0.5;
+  opacity: 0.8;
   text-align: center;
   line-height: 41px;
 }
 .table_cap {
   color: #ff0000;
   font-weight: bold;
-  font-size: 20px;
+  font-size: 18px;
+  line-height: 3;
+  text-shadow: 0px 1px 3px #ffffff;
+  margin-bottom: 0;
 }
+.imanomu_count {
+  position: absolute;
+  top: -10px;
+  right: -15px;
+  font-size: 16px;
+}
+
 .vacan {
   background: gray;
 }
@@ -466,10 +486,10 @@ path.two {
   z-index: 2;
   top: 50%;
   left: 50%;
-  width: 500px;
+  width: 90%;
   transform: translate(-50%, -50%);
   background-color: rgb(210, 243, 238);
-  padding: 3em;
+  padding: 18px;
   border: solid 5px white;
   border-radius: 10px;
   overflow-y: auto;
