@@ -27,11 +27,24 @@ var mySwiper = new Swiper('.swiper-container', {
   });
 </script>
 <h1 class="h4 font-weight-bold border-bottom py-2"><%= @shop.name %></h1>
-<h2 class='head_test'>座席一覧</h2>
 <div class="balloon4">
-  <p>行きたいお店が決まれば<button type="button" class="btn btn-success">IMANOMU</button>を座席にを送ろう！</p>
-  <p>店員さんが座席を空けておいてくれるかも！</p>
+  <p>行きたいお店が決まれば空席を見つけて座席をタップしてお店に知らせよう！</p>
 </div>
-<%= fa_icon 'arrow-circle-left 5x' %>
-<%= fa_icon 'arrow-circle-right 5x' %>
+<h2 class='head_test'>座席一覧</h2>
+<div class='table_how'>
+  <div class='table_fill_detail'>
+    <div class='table_fill'>
+      <div class='table_fill_how'>
+      </div>
+    </div>
+    <p>：満席</p>
+  </div>
+  <div class='table_vacan_detail'>
+    <div class='table_vacan'>
+      <div class='table_vacan_how'>
+      </div>
+    </div>
+    <p>：空席</p>
+  </div>
+</div>
 <%= render "shop#{@shop.id.to_s}" %>

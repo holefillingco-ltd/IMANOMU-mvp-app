@@ -621,9 +621,8 @@ path.two {
   padding: 15px;
   background: #fff0c6;
   border-radius: 30px;
-  width: 50%;
   position: relative;
-  left: 24%;
+  left: -3%;
 }
 .balloon4:before {  
   content: "";
@@ -648,4 +647,40 @@ path.two {
 .balloon4 p {
   margin: 0; 
   padding: 0;
+}
+.table_how {
+  margin: 0 auto;
+  display: flex;
+  margin-top: 42px;
+  width: 200px;
+  justify-content: space-between;
+}
+.table_fill_detail {
+  display: flex;
+}
+.table_fill {
+  background: red;
+  width: 20px;
+  height: 20px;
+}
+.table_fill_how {
+  background-image: image-url("table.jpg");
+  opacity: 0.8;
+  width: 100%;
+  height: 100%;
+  margin-right: 20px;
+}
+.table_vacan_detail {
+  display: flex;
+}
+.table_vacan {
+  background: gray;
+  width: 20px;
+  height: 20px;
+}
+.table_vacan_how {
+  background-image: image-url("table.jpg");
+  opacity: 0.8;
+  width: 100%;
+  height: 100%;
 }
